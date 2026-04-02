@@ -1,0 +1,6 @@
+customer_name,segment,spend,status
+Acme Corp,Enterprise,12000.5,active
+Blue Retail,SMB,3400.0,active
+Core Labs,Enterprise,8900.25,active
+Delta Shop,SMB,2100.0,inactive
+Evergreen Co,MidMarket,5600.0,active
