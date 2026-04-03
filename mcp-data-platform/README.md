@@ -244,6 +244,7 @@ See `FUTURE_ENHANCEMENTS_PLANNED.md` for prioritized backlog items and contribut
 
 ## Example CLI DEMO with Test Data Set Trials:(Network Intrusion DataSet from Kaggle)
 
+```powershell
 python.exe .\demo\cli_demo.py
 Connected session: sess_afa170c98638457d8dccb010754189db
 Session expires at: 2026-04-03T10:58:12.532616+00:00
@@ -252,9 +253,12 @@ Registered dataset: sales_demo
 Columns: date, region, product, amount, status
 Intent provider: auto -> claude (claude-haiku-4-5)
 LLM readiness: ready
+
 Commands: status | schema | sql <query> | nl2sql <question> | preview <question> | ask <question> | register <dataset_id> <csv_path> | use <dataset_id> | datasets | exit
+
 demo> register network data/network_intrusion.csv   
 Registered and switched to dataset: network
+
 demo> schema                                     
 {
   "dataset_id": "network",
@@ -426,6 +430,7 @@ demo> schema
     }
   ]
 }
+
 demo> ask how many services present
 Intent source: claude:claude-haiku-4-5
 Structured intent:
@@ -446,6 +451,7 @@ Rows returned: 1
 count_distinct_service
 ----------------------
 64
+
 demo> ask which services have high error rate but low traffic
 Intent source: claude:claude-haiku-4-5
 Structured intent:
@@ -531,6 +537,7 @@ printer | 0.20454545454545456 | 0.0
 uucp | 0.2 | 0.12
 auth | 0.1644776119402985 | 3.7761194029850746
 remote_job | 0.15 | 0.0
+
 demo> ask compare error rates between tcp and udp services
 Intent source: claude:claude-haiku-4-5
 Structured intent:
@@ -572,5 +579,6 @@ protocol_type | avg_serror_rate | avg_rerror_rate | avg_dst_host_serror_rate | a
 tcp | 0.12289459745762661 | 0.2846822033898292 | 0.11621345338982995 | 0.2747409957627169
 udp | 0.0 | 7.630675314765357e-05 | 0.0019572682182373135 | 0.0189202594429607
 
+```
 These are successfull cases however we can enhance this to reach 95% to 99% success rate if we fine tune.
 
